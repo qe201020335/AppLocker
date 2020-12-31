@@ -1,0 +1,4 @@
+D1.1: Ramdomize chuck of binary data [FR1]
+D1.2: Hide executable in a data dump [FR1]
+D2.1: .NET WPF [FR3]
+D2.2: Java Swing [FR3]
