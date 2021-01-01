@@ -3,3 +3,4 @@ FR2: Customizable lock release time
 FR3: GUI to set and view the lock/release time
 FR4: Ability to select recursive lock or single lock
 FR5: Emergency lock release
+FR6: Remote locking
