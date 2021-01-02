@@ -1,3 +1,12 @@
+Use cases:
+UC1: Set a timed lock
+    1. Open the executable .exe
+    2. Select date time to unlock
+        2.1 Select date from a monthly calendar
+        2.2 Select a specific time from a list of times of the day spaced by .5 hour
+    3. Select which program to lock
+    4. Press "LOCK"
+
 FR1: Lock
 FR2: Customizable lock release time
 FR3: GUI to set and view the lock/release time
