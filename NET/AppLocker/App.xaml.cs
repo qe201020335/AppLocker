@@ -15,20 +15,36 @@ namespace AppLocker
     public partial class App : Application
     {
         private const string steamPath = @"C:\Program Files (x86)\Steam\steam.exe",
-                             savePath = @"C:\Program Files (x86)\Steam\DataChunk";
+                             steamSavePath = @"C:\Program Files (x86)\Steam\DataChunk",
+                             r6Path1 = @"C:\Program Files (x86)\Steam\steamapps\common\Tom Clancy's Rainbow Six Siege\RainbowSix.exe",
+                             r6Path2 = @"C:\Program Files (x86)\Steam\steamapps\common\Tom Clancy's Rainbow Six Siege\RainbowSix_Vulkan.exe",
+                             r6SavePath1 = @"C:\Program Files (x86)\Steam\steamapps\common\Tom Clancy's Rainbow Six Siege\DataChunk1",
+                             r6SavePath2 = @"C:\Program Files (x86)\Steam\steamapps\common\Tom Clancy's Rainbow Six Siege\DataChunk2";
 
-        private static int steamExists = 0;
+
+        private static int steamExists = 0,
+                           r6Exists = 0;
         private const int EXIST = 2;
         private const int NOT_EXIST = 1;
 
-        public static void LockApp()
+        public static void LockSteam()
         {
-            TransferBinaries(steamPath, savePath);
+            TransferBinaries(steamPath, steamSavePath);
+        }
+        public static void ReleaseSteam()
+        {
+            TransferBinaries(steamSavePath, steamPath);
         }
 
-        public static void ReleaseApp()
+        public static void LockR6()
         {
-            TransferBinaries(savePath, steamPath);
+            TransferBinaries(r6Path1, r6SavePath1);
+            TransferBinaries(r6Path2, r6SavePath2);
+        }
+        public static void ReleaseR6()
+        {
+            TransferBinaries(r6SavePath1, r6Path1);
+            TransferBinaries(r6SavePath2, r6Path2);
         }
 
         public static void TransferBinaries(string src, string des)
@@ -45,6 +61,14 @@ namespace AppLocker
                 App.steamExists = File.Exists(steamPath) ? EXIST : NOT_EXIST;
             }
             return steamExists == App.EXIST;
+        }
+        public static bool CheckR6Exist()
+        {
+            if (App.r6Exists == 0)
+            {
+                App.r6Exists = File.Exists(r6Path1) && File.Exists(r6Path2) ? EXIST : NOT_EXIST;
+            }
+            return r6Exists == App.EXIST;
         }
     }
 }

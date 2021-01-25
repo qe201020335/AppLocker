@@ -27,21 +27,41 @@ namespace AppLocker
                 steamStatus.Text = "Steam exists!";
             else
                 steamStatus.Text = "Steam locked!";
+            if (App.CheckR6Exist())
+                r6Status.Text = "R6 exists!";
+            else
+                r6Status.Text = "R6 locked!";
         }
 
-        private void lockButton_Click(object sender, RoutedEventArgs e)
+        private void steamLockButton_Click(object sender, RoutedEventArgs e)
         {
             if (!App.CheckSteamExist())
                 return;
-            App.LockApp();
+            App.LockSteam();
             System.Environment.Exit(0);
         }
 
-        private void releaseButton_Click(object sender, RoutedEventArgs e)
+        private void steamReleaseButton_Click(object sender, RoutedEventArgs e)
         {
             if (App.CheckSteamExist())
                 return;
-            App.ReleaseApp();
+            App.ReleaseSteam();
+            System.Environment.Exit(0);
+        }
+
+        private void r6LockButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!App.CheckR6Exist())
+                return;
+            App.LockR6();
+            System.Environment.Exit(0);
+        }
+
+        private void r6ReleaseButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (App.CheckR6Exist())
+                return;
+            App.ReleaseR6();
             System.Environment.Exit(0);
         }
     }
