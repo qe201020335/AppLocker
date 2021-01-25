@@ -23,26 +23,26 @@ namespace AppLocker
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            //String sDate = myCalendar.SelectedDate.ToString();
-            String sDate = DateTime.Now.ToString();
-            textBlock.Text = sDate;
-            Console.WriteLine(sDate);
-
-            //button.Content = "YEET";
+            if (App.CheckSteamExist())
+                steamStatus.Text = "Steam exists!";
+            else
+                steamStatus.Text = "Steam locked!";
         }
 
         private void lockButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!App.CheckSteamExist())
+                return;
             App.LockApp();
+            System.Environment.Exit(0);
         }
 
         private void releaseButton_Click(object sender, RoutedEventArgs e)
         {
+            if (App.CheckSteamExist())
+                return;
             App.ReleaseApp();
+            System.Environment.Exit(0);
         }
     }
 }

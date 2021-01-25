@@ -7,11 +7,9 @@
         mc:Ignorable="d"
         Title="AppLocker" Height="450" Width="800">
     <Grid>
-        <Button x:Name="button" HorizontalAlignment="Left" Margin="611,337,0,0" VerticalAlignment="Top" Width="75" Click="button_Click">Click Me!</Button>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Margin="611,253,0,0"/>
-        <Calendar x:Name="myCalendar" HorizontalAlignment="Left" VerticalAlignment="Top" Height="167" Width="186" Margin="68,117,0,0"/>
         <Button x:Name="lockButton" Content="Lock Me!" HorizontalAlignment="Left" Height="54" Margin="352,164,0,0" VerticalAlignment="Top" Width="83" Click="lockButton_Click"/>
         <Button x:Name="releaseButton" Content="Release Me!" HorizontalAlignment="Left" Margin="352,277,0,0" VerticalAlignment="Top" Width="109" Height="46" Click="releaseButton_Click"/>
+        <TextBlock x:Name="steamStatus" HorizontalAlignment="Left" Margin="70,64,0,0" TextWrapping="Wrap" Text="N/A" VerticalAlignment="Top"/>
 
 
     </Grid>
