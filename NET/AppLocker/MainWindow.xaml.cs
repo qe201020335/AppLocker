@@ -24,7 +24,7 @@ namespace AppLocker
         {
             InitializeComponent();
             if (App.CheckSteamExist())
-                steamStatus.Text = "Steam exists!";
+                steamStatus.Text = "Steam exists at \"" + App.GetSteamPath() + "\"";
             else
                 steamStatus.Text = "Steam locked!";
             if (App.CheckR6Exist())
