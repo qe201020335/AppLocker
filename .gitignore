@@ -1,2 +1,5 @@
 temp
 data_chunk
+NET/.vs/
+NET/AppLocker/bin
+NET/AppLocker/obj
