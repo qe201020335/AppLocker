@@ -24,13 +24,13 @@ namespace AppLocker
         {
             InitializeComponent();
             if (App.CheckSteamExist())
-                steamStatus.Text = "Steam exists at \"" + App.GetSteamPath() + "\"";
+                steamStatus.Text = "Steam found in \"" + App.GetSteamPath() + "\"";
             else
                 steamStatus.Text = "Steam locked!";
             if (App.CheckR6Exist())
-                r6Status.Text = "R6 exists!";
+                r6Status.Text = "R6S found in \""+ App.GetR6Path() + "\"";
             else
-                r6Status.Text = "R6 locked!";
+                r6Status.Text = "R6S locked!";
         }
 
         private void steamLockButton_Click(object sender, RoutedEventArgs e)
