@@ -7,12 +7,12 @@
         mc:Ignorable="d"
         Title="AppLocker" Height="450" Width="800">
     <Grid>
-        <Button x:Name="lockButton" Content="Lock Steam" HorizontalAlignment="Left" Height="54" Margin="352,164,0,0" VerticalAlignment="Top" Width="83" Click="steamLockButton_Click"/>
-        <Button x:Name="releaseButton" Content="Release Steam" HorizontalAlignment="Left" Margin="352,277,0,0" VerticalAlignment="Top" Width="109" Height="46" Click="steamReleaseButton_Click"/>
+        <Button x:Name="lockButton" Content="Lock Steam" HorizontalAlignment="Left" Height="54" Margin="132,159,0,0" VerticalAlignment="Top" Width="83" Click="steamLockButton_Click"/>
+        <Button x:Name="releaseButton" Content="Release Steam" HorizontalAlignment="Left" Margin="132,272,0,0" VerticalAlignment="Top" Width="109" Height="46" Click="steamReleaseButton_Click"/>
         <TextBlock x:Name="steamStatus" HorizontalAlignment="Left" Margin="70,64,0,0" TextWrapping="Wrap" Text="N/A" VerticalAlignment="Top"/>
-        <Button x:Name="r6LockButton" Content="Lock R6" HorizontalAlignment="Left" Margin="649,193,0,0" VerticalAlignment="Top" Width="75" Click="r6LockButton_Click"/>
-        <Button x:Name="r6ReleaseButton" Content="Release R6" HorizontalAlignment="Left" Margin="649,308,0,0" VerticalAlignment="Top" Width="75" Click="r6ReleaseButton_Click"/>
-        <TextBlock x:Name="r6Status" HorizontalAlignment="Left" Margin="595,93,0,0" TextWrapping="Wrap" Text="N/A" VerticalAlignment="Top"/>
+        <Button x:Name="r6LockButton" Content="Lock R6" HorizontalAlignment="Left" Margin="528,170,0,0" VerticalAlignment="Top" Width="75" Click="r6LockButton_Click"/>
+        <Button x:Name="r6ReleaseButton" Content="Release R6" HorizontalAlignment="Left" Margin="528,285,0,0" VerticalAlignment="Top" Width="75" Click="r6ReleaseButton_Click"/>
+        <TextBlock x:Name="r6Status" HorizontalAlignment="Left" Margin="473,67,0,0" TextWrapping="Wrap" Text="N/A" VerticalAlignment="Top" Height="59" Width="232"/>
 
 
     </Grid>
